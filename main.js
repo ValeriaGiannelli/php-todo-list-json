@@ -6,13 +6,21 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
-
+            // dato che inserisce la persona
+            userInput: '',
+            apiUrl: 'server.php',
+            toDo: []
         }
     },
-    method: {
+    methods: {
         takeList(){
+            // console.log("get api");
             // chiamata API al server.php per prendere la lista
-            
+            axios.get(this.apiUrl)
+            .then(response =>{
+                // console.log(response.data);
+                this.toDo = response.data;
+            })
         }
     },
     mounted(){
