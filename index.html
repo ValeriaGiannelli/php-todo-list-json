@@ -24,62 +24,67 @@
 </head>
 
 <body>
+    <div id="app">
+    
+        <div id="container">
+            <!-- foglio della lista -->
+            <div class="card_list">
+                <!-- titolo -->
+                <h1>To Do List</h1>
 
-    <div id="container">
-        <!-- foglio della lista -->
-        <div class="card_list">
-            <!-- titolo -->
-            <h1>To Do List</h1>
+                <form action="" method="POST">
+                    <!-- input per nuovo elemento -->
+                    <input type="text" v-model="userInput">
 
-            <form action="" method="POST">
-                <!-- input per nuovo elemento -->
-                <input type="text" v-model="userInput">
+                    <!-- bottone che aggiunge elemento alla lista -->
+                    <button @click="addItem">Aggiungi</button>
+                </form>
 
-                <!-- bottone che aggiunge elemento alla lista -->
-                <button @click="addItem">Aggiungi</button>
-            </form>
+                <!-- lista non rodinata -->
+                <ul id="my_list">
+                    <!-- qui andranno i contenuti dell'array in Vue -->
+                    <li class="item_list">
 
-            <!-- lista non rodinata -->
-            <ul id="my_list">
-                <!-- qui andranno i contenuti dell'array in Vue -->
-                <li class="item_list">
+                        <!-- cosa c'è da fare -->
+                        <p>Inserimento Item</p>
 
-                    <!-- cosa c'è da fare -->
-                    <p>Inserimento Item</p>
+                        <!-- icona per cancellarlo -->
+                        <!-- <i class="fa-solid fa-xmark" @click="cancelItem(index)"></i> -->
+                    </li>
+                    <li class="item_list">
 
-                    <!-- icona per cancellarlo -->
-                    <!-- <i class="fa-solid fa-xmark" @click="cancelItem(index)"></i> -->
-                </li>
-                <li class="item_list">
+                        <!-- cosa c'è da fare -->
+                        <p>Inserimento Item</p>
 
-                    <!-- cosa c'è da fare -->
-                    <p>Inserimento Item</p>
+                        <!-- icona per cancellarlo -->
+                        <!-- <i class="fa-solid fa-xmark" @click="cancelItem(index)"></i> -->
+                    </li>
+                    <li class="item_list">
 
-                    <!-- icona per cancellarlo -->
-                    <!-- <i class="fa-solid fa-xmark" @click="cancelItem(index)"></i> -->
-                </li>
-                <li class="item_list">
+                        <!-- cosa c'è da fare -->
+                        <p>Inserimento Item</p>
 
-                    <!-- cosa c'è da fare -->
-                    <p>Inserimento Item</p>
+                        <!-- icona per cancellarlo -->
+                        <!-- <i class="fa-solid fa-xmark" @click="cancelItem(index)"></i> -->
+                    </li>
+                    <li class="item_list">
 
-                    <!-- icona per cancellarlo -->
-                    <!-- <i class="fa-solid fa-xmark" @click="cancelItem(index)"></i> -->
-                </li>
-                <li class="item_list">
+                        <!-- cosa c'è da fare -->
+                        <p>Inserimento Item</p>
 
-                    <!-- cosa c'è da fare -->
-                    <p>Inserimento Item</p>
+                        <!-- icona per cancellarlo -->
+                        <!-- <i class="fa-solid fa-xmark" @click="cancelItem(index)"></i> -->
+                    </li>
+                </ul>
 
-                    <!-- icona per cancellarlo -->
-                    <!-- <i class="fa-solid fa-xmark" @click="cancelItem(index)"></i> -->
-                </li>
-            </ul>
+            </div>
 
         </div>
 
     </div>
 
+    <!-- link al main.js -->
+     <script type="text/javascript" src="main.js"></script>
 
 </body>
 
