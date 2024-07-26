@@ -4,6 +4,15 @@ $toDoList = file_get_contents('list.json');
 
 var_dump($toDoList);
 
-// qui si faranno le chiamate axios
+// modificherò il file json
 
-// dovrà prendere il file json -> trasformarlo per modificarlo -> ritrasformarlo in json e impostare anche questa pagina php come file json
+
+
+
+
+
+
+// ritrasformarlo in json e impostare anche questa pagina php come file json
+header ('Content-Type: application/json');
+
+echo json_encode($toDoList);
