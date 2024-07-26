@@ -41,38 +41,15 @@
                 <!-- lista non rodinata -->
                 <ul id="my_list">
                     <!-- qui andranno i contenuti dell'array in Vue -->
-                    <li class="item_list">
+                    <li class="item_list" v-for="(task, index) in toDo">
 
                         <!-- cosa c'è da fare -->
-                        <p>Inserimento Item</p>
+                        <p>{{task.title}}</p>
 
                         <!-- icona per cancellarlo -->
                         <!-- <i class="fa-solid fa-xmark" @click="cancelItem(index)"></i> -->
                     </li>
-                    <li class="item_list">
-
-                        <!-- cosa c'è da fare -->
-                        <p>Inserimento Item</p>
-
-                        <!-- icona per cancellarlo -->
-                        <!-- <i class="fa-solid fa-xmark" @click="cancelItem(index)"></i> -->
-                    </li>
-                    <li class="item_list">
-
-                        <!-- cosa c'è da fare -->
-                        <p>Inserimento Item</p>
-
-                        <!-- icona per cancellarlo -->
-                        <!-- <i class="fa-solid fa-xmark" @click="cancelItem(index)"></i> -->
-                    </li>
-                    <li class="item_list">
-
-                        <!-- cosa c'è da fare -->
-                        <p>Inserimento Item</p>
-
-                        <!-- icona per cancellarlo -->
-                        <!-- <i class="fa-solid fa-xmark" @click="cancelItem(index)"></i> -->
-                    </li>
+                    
                 </ul>
 
             </div>
