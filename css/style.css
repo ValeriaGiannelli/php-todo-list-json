@@ -1,0 +1,52 @@
+/* css generale */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* caratteristiche container */
+#container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/bg_wood.jpg);
+
+}
+
+/* caratteristiche del foglio della lista */
+.card_list{
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+    padding: 20px 20px 40px 20px;
+}
+
+/* caratteristiche lista */
+#my_list{
+    text-align: start;
+    font-size: 24px;
+    list-style: none;
+}
+
+#my_list li{
+    border-bottom: 2px solid brown;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* padding per le icone inserite */
+#my_list li i{
+    padding-right: 5px;
+}
+
+
+/* classe da aggiungere al click */
+.done{
+    color: gray;
+    text-decoration-line: line-through;
+}
