@@ -1,0 +1,22 @@
+[
+    {
+        "title": "HTML",
+        "done": false,
+        "description": "imparare fondamenti"
+    },
+    {
+        "title": "CSS",
+        "done": false,
+        "description": "imparare fondamenti"
+    },
+    {
+        "title": "JAVA",
+        "done": false,
+        "description": "imparare fondamenti"
+    },
+    {
+        "title": "PHP",
+        "done": false,
+        "description": "imparare fondamenti"
+    }
+]
