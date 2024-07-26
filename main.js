@@ -28,7 +28,6 @@ createApp({
             // scrivo l'oggetto che deve inviare
             const data = {
                 "title": this.userInput,
-                "done": false,
                 "description": "imparare fondamenti"
             }
 
@@ -41,6 +40,8 @@ createApp({
                     console.log(response.data);
                     this.toDo = response.data;
             })
+
+            this.userInput = '';
         }
     },
     mounted() {
