@@ -30,13 +30,6 @@
                 <!-- titolo -->
                 <h1>To Do List</h1>
 
-                <form action="" method="POST">
-                    <!-- input per nuovo elemento -->
-                    <input type="text" v-model="userInput">
-
-                    <!-- bottone che aggiunge elemento alla lista -->
-                    <button>Aggiungi</button>
-                </form>
 
                 <!-- lista non rodinata -->
                 <ul id="my_list">
@@ -51,6 +44,13 @@
                     </li>
                     
                 </ul>
+
+
+                <!-- input per nuovo elemento -->
+                <input @keyup.enter="addTask" type="text" v-model="userInput">
+
+                <!-- bottone che aggiunge elemento alla lista -->
+                <button @click="addTask">Aggiungi</button>
 
             </div>
 
