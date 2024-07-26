@@ -1,12 +1,13 @@
 <?php
 // prendo il file json
-$toDoListJson = file_get_contents('list.json');
+$string = file_get_contents('list.json');
 
-var_dump($toDoListJson);
+// var_dump($string);
 
 // trasformarlo in array
-$toDoList = json_decode($toDoListJson, true);
-var_dump($toDoList);
+$toDoList = json_decode($string);
+// var_dump($toDoList);
+
 // modificherò il file json
 
 
@@ -16,6 +17,8 @@ var_dump($toDoList);
 
 
 // ritrasformarlo in json e impostare anche questa pagina php come file json
-// header ('Content-Type: application/json');
 
-// echo json_encode($toDoList);
+// non funziona finchè non faccio una chiamata Axios?
+
+header('Content-Type: application/json');
+echo json_encode($toDoList);
