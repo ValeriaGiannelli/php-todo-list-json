@@ -47,7 +47,19 @@ createApp({
         // funzione per aggiungere o togliere la classe "done"
         doneUndone(index) {
             // console.log(index);
-            this.toDo[index].done = !this.toDo[index].done;
+            const data = {
+                "indexToChange": index
+            };
+
+            // faccio la chiamata axios
+            axios.post(this.apiUrl, data, {
+                headers: {'Content-Type': 'multipart/form-data'}
+            })
+            .then(response => {
+                this.toDo = response.data;
+            });
+
+            // this.toDo[index].done = !this.toDo[index].done;
         },
 
         cancelItem(index){

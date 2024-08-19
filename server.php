@@ -28,6 +28,18 @@ if (isset($_POST['title'])) {
     file_put_contents('list.json', json_encode($toDoList));
 }
 
+// se esiste la chiave indexToChange allora prendi l'elemento a quell'indice e cambia il done
+if(isset($_POST['indexToChange'])){
+    $index = $_POST['indexToChange'];
+
+    // accedo alla proprietà done dell'elemento all'indice selezionato e la trasformo nel suo opposto
+    $toDoList[$index]->done = !$toDoList[$index]->done;
+
+    // aggiorno il file json
+    file_put_contents('list.json', json_encode($toDoList));
+
+}
+
 // se esiste chiave indexToDelete allora cancella
 if(isset($_POST['indexToDelete'])){
     // rimuovi l'elemento con l'indice dato
