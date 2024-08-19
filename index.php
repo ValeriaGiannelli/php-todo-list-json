@@ -13,9 +13,9 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <!-- Fontawesome -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"> -->
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- mio css -->
     <link rel="stylesheet" href="css/style.css">
@@ -34,10 +34,10 @@
                 <!-- lista non rodinata -->
                 <ul id="my_list">
                     <!-- qui andranno i contenuti dell'array in Vue -->
-                    <li class="item_list" v-for="(task, index) in toDo">
+                    <li class="item_list" v-for="(task, index) in toDo" :key="index">
 
                         <!-- cosa c'è da fare -->
-                        <p :class="task.done ? 'done' : ''">{{task.title}}</p>
+                        <p :class="task.done ? 'done' : ''" @click="doneUndone(index)">{{task.title}}</p>
 
                         <!-- icona per cancellarlo -->
                         <!-- <i class="fa-solid fa-xmark" @click="cancelItem(index)"></i> -->

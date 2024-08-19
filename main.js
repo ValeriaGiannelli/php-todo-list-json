@@ -29,20 +29,30 @@ createApp({
             const data = {
                 "title": this.userInput,
                 "description": "imparare fondamenti"
-            }
+            };
 
             // console.log(data);
             // faccio la chiamata che trasmetterà l'oggetto creato prima
             axios.post(this.apiUrl, data, {
-                headers: {'Content-Type': 'multipart/form-data'}
+                headers: { 'Content-Type': 'multipart/form-data' }
             })
-                .then(response =>{
+                .then(response => {
                     console.log(response.data);
                     this.toDo = response.data;
-            })
+                });
 
             this.userInput = '';
-        }
+        },
+
+        // funzione per aggiungere o togliere la classe "done"
+        doneUndone(index) {
+            // console.log(index);
+            this.toDo[index].done = !this.toDo[index].done;
+        },
+
+        // cancelItem(index){
+        //     console.log(index);
+        // }
     },
     mounted() {
         // quando pagina caricata faccio partire la chiamata per prendere la lista
