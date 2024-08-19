@@ -37,7 +37,7 @@
                     <li class="item_list" v-for="(task, index) in toDo">
 
                         <!-- cosa c'è da fare -->
-                        <p>{{task.title}}</p>
+                        <p :class="task.done ? 'done' : ''">{{task.title}}</p>
 
                         <!-- icona per cancellarlo -->
                         <!-- <i class="fa-solid fa-xmark" @click="cancelItem(index)"></i> -->
