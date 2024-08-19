@@ -40,7 +40,7 @@
                         <p :class="task.done ? 'done' : ''" @click="doneUndone(index)">{{task.title}}</p>
 
                         <!-- icona per cancellarlo -->
-                        <!-- <i class="fa-solid fa-xmark" @click="cancelItem(index)"></i> -->
+                        <i v-show="task.done" class="fa-solid fa-xmark" @click="cancelItem(index)"></i>
                     </li>
                     
                 </ul>

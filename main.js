@@ -50,9 +50,19 @@ createApp({
             this.toDo[index].done = !this.toDo[index].done;
         },
 
-        // cancelItem(index){
-        //     console.log(index);
-        // }
+        cancelItem(index){
+            console.log(index);
+            const data = {
+                "indexToDelete": index
+            };
+
+            axios.post(this.apiUrl, data, {
+                headers: {'Content-Type': 'multipart/form-data'}
+            })
+            .then(response => {
+                this.toDo = response.data;
+            })
+        }
     },
     mounted() {
         // quando pagina caricata faccio partire la chiamata per prendere la lista

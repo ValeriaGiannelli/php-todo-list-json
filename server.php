@@ -28,8 +28,14 @@ if (isset($_POST['title'])) {
     file_put_contents('list.json', json_encode($toDoList));
 }
 
-// salvo il nuovo json nel nostro database list.json
+// se esiste chiave indexToDelete allora cancella
+if(isset($_POST['indexToDelete'])){
+    // rimuovi l'elemento con l'indice dato
+    array_splice($toDoList, $_POST['indexToDelete'], 1);
 
+    // aggiorno il file json
+    file_put_contents('list.json', json_encode($toDoList));
+}
 
 
 // ritrasformarlo in json e impostare anche questa pagina php come file json
